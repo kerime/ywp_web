@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YWP Puzzle Recreated</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="battle-panel" aria-label="battle">
+      <div class="topbar">
+        <div>
+          <span class="label">STAGE</span>
+          <select id="stageSelect" aria-label="stage select"></select>
+        </div>
+        <div class="scorebox">
+          <span class="label">SCORE</span>
+          <strong id="score">0</strong>
+        </div>
+        <button id="resetButton" type="button">RESET</button>
+      </div>
+      <div class="enemy-row" id="enemyRow"></div>
+      <div class="player-row">
+        <div class="hp">
+          <span class="label">HP</span>
+          <div class="hpbar"><span id="hpFill"></span></div>
+          <strong id="hpText">0 / 0</strong>
+        </div>
+        <div class="turn">
+          <span class="label">TURN</span>
+          <strong id="turnText">1</strong>
+        </div>
+      </div>
+    </section>
+    <section class="board-wrap">
+      <div id="message" class="message"></div>
+      <div id="board" class="board" aria-label="puzzle board"></div>
+    </section>
+  </main>
+  <script type="module" src="dist/main.js"></script>
+</body>
+</html>
